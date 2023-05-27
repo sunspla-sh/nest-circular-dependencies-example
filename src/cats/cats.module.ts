@@ -4,7 +4,7 @@ import { CatsController } from './cats.controller';
 import { DogsModule } from 'src/dogs/dogs.module';
 
 @Module({
-  imports: [forwardRef(() => DogsModule)],
+  imports: [forwardRef(() => DogsModule)], //circular dependency between two modules
   controllers: [CatsController],
   providers: [CatsService],
   exports: [CatsService],
